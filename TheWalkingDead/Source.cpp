@@ -2,7 +2,7 @@
 #include<string>
 #include <ctime>
 
-enum weapon
+enum Weapon
 {
 	FISTS,GUN,SHOTGUN,REVOLVER,SNIPER,MACHINE_GUN,MAX
 };
@@ -11,12 +11,13 @@ class Zombie;
 class Player
 {
 
-	weapon weapon=rand()%6;
+	Weapon weapon;
 	float precision;
 	int life;
 	
 public:
-	Player();
+	Player() : weapon(static_cast<Weapon>(rand() % 6)),precision((rand()%11)/10.0),life(100) {};
+
 	void attack(Zombie &) {};
 	bool isAlive() {};
 };
@@ -37,7 +38,7 @@ class Zombie {
 
 
 
-
+6yu
 
 
 
