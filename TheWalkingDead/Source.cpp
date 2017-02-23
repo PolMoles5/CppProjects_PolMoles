@@ -26,9 +26,11 @@ class Zombie {
 	int distanceToPlayer;
 	float speed;
 	float damage;
+public:
+	Zombie() :distanceToPlayer((rand()%180)+20),speed((rand()%21/10.0)),damage((rand() % 21 / 10.0) {};
 	void attack(Player &) {};
 	bool isAlive;
-	Zombie();
+	
 };
 
 
@@ -38,7 +40,7 @@ class Zombie {
 
 
 
-6yu
+
 
 
 
